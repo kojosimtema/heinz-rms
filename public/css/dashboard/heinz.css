@@ -1,0 +1,359 @@
+.heiz-dashboard-forms input,
+.heiz-dashboard-forms select {
+    border-radius: 0;
+    width: 95%;
+}
+.heiz-dashboard-forms .gcr-search button[type="submit"] {
+    margin-top: 25px;
+    border-radius: 0;
+}
+.heinz-progress {
+    height: 22px;
+    margin-top: 20px;
+}
+.heinz-progress h4.modal-title {
+    font-size: 13px;
+    position: relative;
+    /* top: -8px; */
+    color: white;
+    font-weight: 500;
+}
+.dragdrop {
+    margin-top: 10px;
+}
+.dragdrop button {
+    border-radius: 0;
+    font-size: 12px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    border-color: gray;
+}
+.m-top-20 {
+    margin-top: 20px;
+}
+.heiz-dashboard-forms textarea {
+    resize: none;
+    width: 100%;
+}
+.heiz-dashboard-forms .form-desc {
+    color: #fe4d3f;
+    font-size: 15px;
+}
+.btn-owner {
+    margin-top: 24px;
+    width: 150px;
+}
+.form-fix-width {
+    width: 70%;
+    margin: auto;
+}
+.table-fixed-height {
+    height: 400px;
+    overflow-y: auto;
+    width: 110%;
+}
+.form-desc {
+    color: #fe4d3f;
+    font-size: 15px;
+}
+.occupants-container {
+    background: #f3f3f3;
+    max-height: 250px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+.fixed-issue-container {
+    background: #eceff2;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    max-height: 290px;
+    overflow-y: scroll;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.fixed-issue-container input[type="checkbox"] {
+    position: absolute;
+    width: 15px;
+    left: -5px;
+}
+.fixed-issue-container label {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 10px;
+}
+.fixed-issue-container label > span {
+    color: #e02929;
+}
+.heinz-dashboard-nav-cards .card-box > .text-center {
+    background: #36404a;
+    opacity: 0.9;
+    height: 100%;
+}
+.heinz-dashboard-nav-cards .card-box {
+    /* background: #2b3c51; */
+    opacity: 1;
+    background-color: #36404a;
+    background-image: url("../../images/app/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 410px;
+    padding-top: 0px;
+    margin-top: 30px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border: none;
+}
+.t-align-right {
+    text-align: right;
+    margin-right: 15px;
+}
+.c-stats {
+    text-align: left;
+    margin-left: 10px;
+}
+.c-stats h5 {
+    color: aliceblue;
+    font-size: 13px;
+}
+.c-stats h5 > span {
+    font-size: 16px;
+    color: #fbe0c0;
+}
+.heinz-dashboard-nav-cards .card-box .text-white {
+    /* color: orangered; */
+    font-size: 14px;
+}
+.heinz-dashboard-nav-cards .card-box h3.text-white {
+    font-size: 23px;
+    padding-top: 10px;
+}
+.heinz-dashboard-nav-cards .card-box button {
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    color: #36404a;
+    font-size: 30px;
+    font-weight: 400;
+    background: #fff;
+    border: none;
+    box-shadow: inset 3px 5px 1px 0px #fff;
+}
+.stats-form fieldset {
+    border: 1px solid #969b9e;
+    padding: 0.35em 0.625em 0.75em;
+    margin: 0 2px;
+}
+.stats-form legend {
+    border: none;
+    width: unset;
+    color: crimson;
+}
+.current-stats .card-box {
+    background: #293c53;
+    color: aliceblue;
+    border-radius: 20px;
+}
+.current-stats .card-box h4 {
+    color: aliceblue;
+}
+.current-stats button {
+    background: #2a3c52;
+    color: aliceblue;
+    border: none;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    box-shadow: inset -1px 0px 20px 0px #ccc;
+}
+.amount-due {
+    border: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: auto;
+    padding-left: 45px;
+    box-shadow: 3px 2px 6px #ccc;
+    background: #edeeee;
+}
+.amount-due h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+.top-bill-page {
+    text-align: center;
+}
+.bill-type {
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 30px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.bill-type h4 {
+    font-size: 21px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+.top-bill-page img {
+    width: 30%;
+}
+.ac-bill {
+    text-align: left;
+    padding-left: 65px;
+    margin-top: 10px;
+}
+.ac-bill p {
+    font-weight: 600;
+    font-size: 15px;
+}
+.ac-bill p > span {
+    font-weight: 100;
+    font-size: 15px;
+}
+.border-bill {
+    border: 2px solid #ccc;
+    margin-left: 62px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+.border-bill > .ac-bill {
+    padding-left: 10px;
+}
+.bill-sign {
+    position: absolute;
+    left: 168px;
+    margin-top: 40px;
+}
+.ac-bill p > span.bill-sign-cap {
+    font-size: 13px;
+    text-align: center;
+    position: relative;
+    left: 65px;
+}
+.border-bill2 {
+    border: 2px solid #ccc;
+    margin-left: 62px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-right: 120px;
+}
+.border-bill2 > .ac-bill {
+    padding-left: 10px;
+}
+.bill-b {
+    font-weight: 800;
+    margin-left: 66px;
+    color: #505152;
+}
+.m-border {
+    border: 2px solid #ccc;
+}
+.m-border h3 {
+    text-transform: uppercase;
+}
+@media print {
+    .amount-due {
+        border: 1px solid #ccc;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: auto;
+        padding-left: 45px;
+        box-shadow: 3px 2px 6px #ccc;
+        background: #edeeee;
+    }
+    .amount-due h4 {
+        font-size: 22px;
+        font-weight: 600;
+    }
+    .top-bill-page {
+        text-align: center;
+    }
+    .bill-type {
+        text-align: center;
+        border-bottom: 2px solid #ccc;
+        margin-bottom: 30px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-top: -20px;
+    }
+    .bill-type h4 {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+    .top-bill-page img {
+        width: 30%;
+    }
+    .ac-bill {
+        text-align: left;
+        padding-left: 35px;
+        margin-top: 0px;
+    }
+    .ac-bill p {
+        font-weight: 600;
+        font-size: 9px;
+    }
+    .ac-bill p > span {
+        font-weight: 100;
+        font-size: 8px;
+    }
+    .border-bill {
+        border: 2px solid #ccc;
+        margin-left: 62px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+    }
+    .border-bill > .ac-bill {
+        padding-left: 10px;
+    }
+    .bill-sign {
+        position: absolute;
+        left: 168px;
+        margin-top: 40px;
+    }
+    .ac-bill p > span.bill-sign-cap {
+        font-size: 13px;
+        text-align: center;
+        position: relative;
+        left: 65px;
+    }
+    .border-bill2 {
+        border: 2px solid #ccc;
+        margin-left: 62px;
+        margin-top: 6px;
+        margin-bottom: 6px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        margin-right: 120px;
+    }
+    .border-bill2 > .ac-bill {
+        padding-left: 10px;
+    }
+    .bill-b {
+        font-weight: 800;
+        margin-left: 66px;
+        color: #505152;
+        font-size: 9px;
+    }
+    .m-border {
+        border: 2px solid #ccc;
+    }
+    .m-border h3 {
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+}
