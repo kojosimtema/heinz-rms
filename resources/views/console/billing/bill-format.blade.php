@@ -11,14 +11,14 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="">Payment Due Date For all Bills</label>
-            <input type="date" class="form-control" name="paymet_date" value="<?= $setting->paymet_date; ?>">
-            <small> Default: <span style="color:brown;"><?= \Carbon\Carbon::parse($setting->paymet_date)->toFormattedDateString();?></span></small>
+            <input type="date" class="form-control" name="paymet_date" value="<?= $setting->paymet_date ? $setting->paymet_date : ''; ?>">
+            <small> Default: <span style="color:brown;"><?= \Carbon\Carbon::parse($setting->paymet_date ? $setting->paymet_date : date('Y-m-d'))->toFormattedDateString();?></span></small>
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
             <label for="">Cordinators Numbers</label>
-            <input type="text" class="form-control" name="contact_info_text" value="<?= $setting->contact_info_text; ?>">
+            <input type="text" class="form-control" name="contact_info_text" value="<?= $setting->contact_info_text ? $setting->contact_info_text : ''; ?>">
           </div>
         </div>
       </div>
@@ -27,14 +27,14 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="">Cordinator Position</label>
-            <input type="text" class="form-control" name="authority_person" value="<?= $setting->authority_person; ?>">
+            <input type="text" class="form-control" name="authority_person" value="<?= $setting->authority_person ? $setting->authority_person : ''; ?>">
           </div>
         </div>
         <div class="col-md-6">
           <div class="form-group">
             <label for="">Organization Type</label>
             <select class="form-control" name="organization_type" value="">
-              <option disabled="true" selected="true" value="<?= $setting->organization_type; ?>"><?= $setting->organization_type; ?></option>
+              <option disabled="true" selected="true" value="<?= $setting->organization_type ? $setting->organization_type : ''; ?>"><?= $setting->organization_type ? $setting->organization_type : ''; ?></option>
               <option value="Metro">Metropolitan</option>
               <option value="District">District</option>
               <option value="Municipal">Municipal</option>
@@ -71,7 +71,7 @@
         <div class="col-md-12">
           <div class="form-group">
             <label for="">Law Info</label>
-            <textarea class="form-control" name="enforce_law_text" rows="8" cols="80"><?= $setting->enforce_law_text; ?></textarea>
+            <textarea class="form-control" name="enforce_law_text" rows="8" cols="80"><?= $setting->enforce_law_text ? $setting->enforce_law_text : ''; ?></textarea>
           </div>
         </div>
       </div>
@@ -80,7 +80,7 @@
         <div class="col-md-6">
           <div class="form-group">
             <label for="">Bill date</label>
-            <input type="date" class="form-control" name="bill_date" value="<?= $setting->bill_date; ?>">
+            <input type="date" class="form-control" name="bill_date" value="<?= $setting->bill_date ? $setting->bill_date : ''; ?>">
           </div>
         </div>
       </div>
