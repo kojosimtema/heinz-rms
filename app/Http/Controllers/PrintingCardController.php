@@ -132,7 +132,8 @@ class PrintingCardController extends Controller
             // Cloudder::upload(request('assembly_signature'), null);
             // list($width, $height) = getimagesize($request->assembly_logo);
             // $image_url = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
-            $setting->signature = $image_url;
+            $path = Storage::disk('do')->put('assemblies', $request->assembly_logo, 'public');
+            $setting->signature = env('DO_URL').'/'. $path;
         endif;
 
         $setting->save();
