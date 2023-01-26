@@ -181,7 +181,7 @@ Route::prefix('console')->group(function () {
 
     /** */
     Route::get('customize/bill/format', 'PrintingCardController@formatBill')->name('customize.bill.format');
-    Route::put('customize/bill/format', 'PrintingCardController@updateFormatBill')->name('customize.bill.format');
+    Route::put('customize/bill/format', 'PrintingCardController@P')->name('customize.bill.format');
 
     /** */
     Route::get('advanced/report/search/property', 'AdvancedReportController@propertyListingSearch')->name('advanced.report.search.property');

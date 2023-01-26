@@ -21,6 +21,7 @@ use App\WebClientPrint\DefaultPrinter;
 use App\WebClientPrint\InstalledPrinter;
 use App\WebClientPrint\PrintFile;
 use App\WebClientPrint\ClientPrintJob;
+use Illuminate\Support\Facades\Storage;
 
 use Session;
 use Cloudder;
@@ -119,16 +120,18 @@ class PrintingCardController extends Controller
         endif;
 
         if ($request->assembly_logo) :
-            Cloudder::upload(request('assembly_logo'), null);
-            list($width, $height) = getimagesize($request->assembly_logo);
-            $image_url = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
-            $setting->logo = $image_url;
+            // Cloudder::upload(request('assembly_logo'), null);
+            // list($width, $height) = getimagesize($request->assembly_logo);
+            // $image_url = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
+            $path = Storage::disk('do')->put('assemblies', $request->assembly_logo, 'public');
+            $setting->logo = env('DO_URL').'/'. $path;
+
         endif;
 
         if ($request->assembly_signature) :
-            Cloudder::upload(request('assembly_signature'), null);
-            list($width, $height) = getimagesize($request->assembly_logo);
-            $image_url = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
+            // Cloudder::upload(request('assembly_signature'), null);
+            // list($width, $height) = getimagesize($request->assembly_logo);
+            // $image_url = Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height" => $height]);
             $setting->signature = $image_url;
         endif;
 
