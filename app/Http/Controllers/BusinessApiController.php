@@ -413,16 +413,7 @@ class BusinessApiController extends Controller
         return response()->json(['status' => 'success', 'business' => $business, 'owner' => $businessOwner], 201);
     }
 
-    public function createImageFromBase64($image){
-        $file_name = 'image_'.time().'.png'; //generating unique file name;
-        @list($type, $image) = explode(';', $file_data);
-        @list(, $file_data) = explode(',', $file_data);
-
-        if($file_data!=""){ // storing image in storage/app/public Folder
-               \Storage::disk('public')->put($file_name,base64_decode($file_data));
-         }
-         return $file_name;
-     }
+    
 
      public function checkMobileAuth(Request $request)
      {
