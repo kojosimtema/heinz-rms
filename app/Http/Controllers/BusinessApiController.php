@@ -289,7 +289,9 @@ class BusinessApiController extends Controller
         //   list($width, $height) = getimagesize($request->image);
         //   $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
           
-          $path = Storage::disk('do')->put('businesses', request('image'), 'public');
+        
+          $path = Storage::disk('do')->put('businesses', $request->image, 'public');
+          Storage::disk('do')->put('businesses', base64_decode($request->image), 'public');
           $props = array_merge($props,['image' => env('DO_URL').'/'. $path]);
         endif;
         $res = BusinessOwner::create($owns);
