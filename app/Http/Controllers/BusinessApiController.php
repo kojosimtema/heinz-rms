@@ -28,6 +28,8 @@ use App\Bill;
 
 use Cloudder;
 
+use Illuminate\Support\Facades\Storage;
+
 use App\Http\Controllers\SetupController as Setup;
 
 class BusinessApiController extends Controller
