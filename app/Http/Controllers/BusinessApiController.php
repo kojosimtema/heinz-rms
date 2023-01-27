@@ -293,7 +293,7 @@ class BusinessApiController extends Controller
         //   $path = Storage::disk('do')->put('businesses', $request->image, 'public');
         //   Storage::disk('do')->put('businesses', base64_decode($request->image), 'public');
         //   $props = array_merge($props,['image' => env('DO_URL').'/'. $path]);
-          $path =  $this->createImageFromBase64($request->image, 'signatures');
+          $path =  $this->createImageFromBase64($request->image, 'businesses');
            $props = array_merge($props,['image' => env('DO_URL').'/'. $path]);
         endif;
         $res = BusinessOwner::create($owns);
