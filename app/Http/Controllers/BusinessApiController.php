@@ -290,9 +290,11 @@ class BusinessApiController extends Controller
         //   $image_url= Cloudder::show(Cloudder::getPublicId(), ["width" => $width, "height"=>$height]);
           
         
-          $path = Storage::disk('do')->put('businesses', $request->image, 'public');
-          Storage::disk('do')->put('businesses', base64_decode($request->image), 'public');
-          $props = array_merge($props,['image' => env('DO_URL').'/'. $path]);
+        //   $path = Storage::disk('do')->put('businesses', $request->image, 'public');
+        //   Storage::disk('do')->put('businesses', base64_decode($request->image), 'public');
+        //   $props = array_merge($props,['image' => env('DO_URL').'/'. $path]);
+          $path =  $this->createImageFromBase64($request->image, 'signatures');
+           $props = array_merge($props,['image' => env('DO_URL').'/'. $path]);
         endif;
         $res = BusinessOwner::create($owns);
         if($res) {
@@ -444,4 +446,20 @@ class BusinessApiController extends Controller
 
         return response()->json(['status' => 'success', 'cats' => $cats], 201);
      }
+
+     public function createImageFromBase64($image_64, $route){
+
+        $file_name = 'image_'.time().'.png';
+        $path = $route.'/'.$file_name;
+        @list($type, $image_64) = explode(';', $image_64);
+        @list(, $image_64)      = explode(',', $image_64);
+        if($image_64!=""){
+               // storing image in storage/app/public Folder
+                //   Storage::disk('public')->put($file_name,base64_decode($file_data));
+            $storage = Storage::disk('do')->put($route.'/'.$file_name, base64_decode($image_64), 'public');
+            return $path;
+
+        }
+
+    }
 }
